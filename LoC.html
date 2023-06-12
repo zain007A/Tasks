@@ -1,0 +1,43 @@
+<html lang="en">
+<head>
+    <title>Get IP Address</title>
+</head>
+<body>
+
+<h1><p id="loc" style="font-weight: bold;"> </p></h1>
+<button onclick="myFunction()" >get IP address</button>
+
+<br>
+
+<p></p>
+
+<button onclick="getLocation()">get Location</button>
+
+<p id="loc"></p>
+
+<script> 
+function myFunction (){
+    document.getElementById("loc").innerHTML='IP address: 172.16.4.28';
+} 
+
+
+var a = document.getElementById("loc");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  a.innerHTML = "Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude;
+}
+    </script>
+
+
+
+</body>
+</html>

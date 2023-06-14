@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signUp Form</title>
+    <link rel="stylesheet" href="signup.css">
+    <script src="https://kit.fontawesome.com/04bf3b045f.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="form-data">
+            <h1 id="title">Sign Up</h1>
+            <form>
+                <div class="input-group">
+                    <div class="input-field">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" placeholder="Name" id="nameField" required>
+                    </div>
+
+                    <div class="input-field">
+                        <i class="fa-solid fa-envelope"></i>
+                        <input type="email" placeholder="Email" id ="email" required autofocus autocomplete="off">
+                    </div>
+
+                    <div class="input-field">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" placeholder="Password" id="password" required>
+                    </div>
+                    <p>Lost Password <a href="forget.html">Click Here!</a></p>
+                </div>
+                <div class="btn">
+                    <button type="button" id="signupBtn" onclick="signup()"><a href="login.html">Sign up</a></button>
+                    
+                </div>  
+            </form>
+        </div>
+
+    </div>
+    <script>
+        function signup(){
+            var name=document.getElementById("nameField").value;
+            var email=document.getElementById("email").value;
+            var password=document.getElementById("password").value;
+
+            localStorage.setItem("name1",name);
+            localStorage.setItem("email1",email);
+            localStorage.setItem("password1",password);
+
+        }
+
+
+
+       
+    </script> 
+</body>
+</html>

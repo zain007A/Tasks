@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML & CSS</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        #container {
+            width: 100%;
+            max-width: 1220px;
+            margin: auto;
+            padding: 20px;
+        }
+        
+        .main {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+        
+        .row1_col1 {
+            width: 100%;
+            max-width: 400px;
+            height: 400px;
+            background-color: rgb(202, 197, 197);
+        }
+        
+        .row1_col2 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-left: 30px;
+            width: calc(100% - 430px);
+        }
+        
+        .box {
+            width: 100%;
+            height: 180px;
+            background-color: rgb(217, 214, 211);
+        }
+        
+        .row2 {
+            margin-top: 40px;
+            height: 150px;
+            background-color: rgb(187, 185, 185);
+            margin-bottom: 40px;
+        }
+        
+        .row3 {
+            display: grid;
+            gap: 19px;
+            grid-template-columns: repeat(4, 1fr);
+            margin: auto;
+            width: 100%;
+            max-width: 1160px;
+        }
+        
+        .square {
+            margin-top: 20px;
+            width: 100%;
+            height: 150px;
+            background-color: rgb(220, 216, 216);
+            margin-bottom: 20px;
+        }
+        
+        @media (max-width: 768px) {
+            .main {
+                flex-direction: column;
+            }
+            
+            .row1_col1 {
+                margin-top: 30px;
+                max-width: none;
+            }
+            
+            .row1_col2 {
+                width: 100%;
+                margin-left: 0;
+                margin-top: 20px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .row3 {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 10px;
+                max-width: 300px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section id="container">
+        <div class="main">
+            <div class="row1_col1"></div>
+
+            <div class="row1_col2">
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+            </div>
+        </div>
+        <section>
+            <div class="row2"></div>
+        </section>
+        <section>
+            <div class="flex">
+                <div class="row3">
+                    <div class="square"></div>
+                    <div class="square"></div>
+                    <div class="square"></div>
+                    <div class="square"></div>
+                    <div class="square"></div>
+                    <div class="square"></div>
+                    <div class="square"></div>
+                    <div class="square"></div>
+                </div>
+            </div>
+        </section>
+    </section>
+</body>
+
+</html>
